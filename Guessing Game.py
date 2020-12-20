@@ -50,19 +50,10 @@ game.play()
 
 
 """    
-@@@ assignment – create a def object for a random number
 
-such that
+assignment
 
-from random import randint
-a = randint(0,100)
-game = GuessNumber(a)
-game.play()
+create a random number generator within GuessNumber such that it relies on self.mn and self.mx
+-> to reduce human error when changing limits in line 46
 
-works
-
-    def rand_number():
-        from random import randint
-        rand_num = (0,100)
-        
 """
