@@ -16,7 +16,7 @@ class GuessNumber:
             return int(guess)
         else:
             # if False, then this will execute
-            print("Please enter a valid number.")
+            print("Please enter a valid guess.")
             return self.get_guess()
     
     def valid_number(self, str_number):
