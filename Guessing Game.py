@@ -1,9 +1,11 @@
+from random import randint
+
 class GuessNumber:
-   
-    def __init__ (self, number, mn=0, mx=100):
-        self.number = number
+
+    def __init__ (self, mn=0, mx=100):
         self.min = mn
         self.max = mx
+        self.number = randint(self.min, self.max)
         self.guesses = 0
 
     def get_guess(self):
@@ -42,18 +44,6 @@ class GuessNumber:
                 break        
         print(f"You guessed it in {self.guesses} guesses.")
 
-from random import randint
-a = randint(0,100)
-game = GuessNumber(a)
+game = GuessNumber(1000,10000)
+print(game.__dict__) # to know the number to guess
 game.play()
-
-
-
-"""    
-
-assignment
-
-create a random number generator within GuessNumber such that it relies on self.mn and self.mx
--> to reduce human error when changing limits in line 46
-
-"""
